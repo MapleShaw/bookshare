@@ -25,3 +25,5 @@
 ###详细的信息
 来自：[我滴Github项目页面](https://github.com/MapleShaw/StaticTemplate)
 
+Tips：
+    $ git remote add origin git@github.com:xxx的时候出现fatal: remote origin already exists.这个错误，使用git remote rm origin

@@ -1,6 +1,6 @@
 {
-  "name": "StaticTemplate",
-  "version": "0.0.2",
+  "name": "BookShare",
+  "version": "0.0.1",
   "author": "MapleShaw",
   "devDependencies": {
     "grunt": "~0.4.2",

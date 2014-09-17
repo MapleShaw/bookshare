@@ -35,3 +35,15 @@ Tips：
 这个错误，使用
 
     git remote rm origin
+
+###2014-09-16 update
+
+    [$injector:modulerr] http://errors.angularjs.org/1.2.24/$injector/modulerr?p0=bookShare&p1=Error…%3A%2F%2F%2FD%3A%2FsublimeGit%2Fbookshare%2Fjs%2Fangular.min.js%3A18%3A170) 
+
+这个错误由mian.js模块依赖对应不上导致
+
+    XMLHttpRequest cannot load file:///D:/sublimeGit/bookshare/tpls/hot.html. Cross origin requests are only supported for HTTP. angular.min.js:79
+    Error: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'file:///D:/sublimeGit/bookshare/tpls/hot.html'.
+
+这个错误由 [慕课网](http://www.imooc.com/qadetail/16144) 
+

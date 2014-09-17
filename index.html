@@ -1,24 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bookShare">
 	<head>
 		<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
 		<title>BookShare--一个图书分享平台</title>
 		<meta name="keywords" content="图书分享" />
 		<meta name="description" content="图书分享" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<link href="minZip/css/min.style.css" rel="stylesheet" type="text/css" />
-		<!--
-		*若需直接在Chrome里调试Sass，建议直接调用/css/style.css以开启Sourcemap*
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
-		*
-		-->
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link href="css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+
 	</head>
 	<body>
-		<!-- 请根据自己的实际需求配置 -->
-		<h1>BookShare--一个图书分享平台</h1>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="" class="navbar-brand">BookShare</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="">热门</a></li>
+					<li><a href="">分类</a></li>
+					<li class="dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="">Action</a></li>
+							<li><a href="">Action</a></li>
+							<li><a href="">Action</a></li>
+							<li class="divider"></li>
+							<li><a href="">Action</a></li>
+							<li class="divider"></li>
+							<li><a href="">Action</a></li>	
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="搜搜看你想要的书。。。">
+					</div>
+					<button class="btn btn-default">搜索</button>
+				</form>
+			</div>
+		</nav>
+		<div class="container content" ng-view>
+			
+		</div>
+		<div class="footer">
+			<div class="container">
+				<p class="text-muted">打造一个全方位O2O图书漂流平台！Copyright © 2014 www.mapleshaw.com All Rights Reserved</p>
+			</div>
+		</div>
 
 		<!-- 在底部加载相关js -->
-		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="minZip/js/min.v.js"></script>
+		<script src="js/frameJs/angular.min.js"></script>
+		<script src="js/frameJs/angular-route.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/controller.js"></script>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="js/frameJs/jquery.min.js"></script>	
+		<script src="js/frameJs/bootstrap.min.js"></script>
 </body>
 </html>

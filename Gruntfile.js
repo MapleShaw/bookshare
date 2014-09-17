@@ -78,7 +78,8 @@ module.exports=function(grunt){
               paths: ['<%= paths.less %>']
             },
             files: {
-              '<%= paths.css %>/style.css':'<%= paths.less %>/reset.less'
+              '<%= paths.css %>/reset.css':'<%= paths.less %>/reset.less',
+              '<%= paths.css %>/index.css':'<%= paths.less %>/index.less'
             }
           }
         },

@@ -1,0 +1,13 @@
+.content {
+  margin-top: 100px;
+}
+.content .movieList li {
+  display: inline-block;
+  margin-right: 60px;
+}
+.content .movieList li a {
+  float: right;
+}
+.footer {
+  margin: 50px 0;
+}

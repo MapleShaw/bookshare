@@ -1,0 +1,17 @@
+<h2>图书详情   <small>看好了赶紧下手，晚了就没啦( # ▽ # )</small></h2>
+<div class="row detailRow">
+  <div class="col-md-4">
+  	<img src="{{book.img}}" alt="{{book.name}}">
+  </div>
+  <div class="col-md-8">
+  	<p class="text-left">书名：{{book.name}}</p>
+  	<p class="text-left">作者：{{book.author}}</p>
+  	<p class="text-left">上传者：{{book.uploader}}</p>
+  	<p class="text-left">豆瓣链接：<a href="{{book.doubanUrl}}" target="_blank"><img src="http://img3.douban.com/pics/douban-icons/favicon_16x16.png" alt="豆瓣" /></a></p>
+  	<p class="text-left">热度：{{book.hot}}</p>
+  	<p class="text-left">
+  		<button type="button" class="btn btn-success">我要了</button>
+  		<button type="button" class="btn btn-warning">联系上传者</button>
+  	</p>
+  </div>
+</div>

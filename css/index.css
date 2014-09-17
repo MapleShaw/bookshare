@@ -1,3 +1,4 @@
+/* index */
 .content {
   margin-top: 100px;
 }
@@ -9,5 +10,23 @@
   float: right;
 }
 .footer {
-  margin: 50px 0;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -330px;
+}
+/* hot */
+.hotBookList {
+  margin-top: 50px;
+}
+/* addBook */
+.addBookForm {
+  margin-top: 50px;
+}
+/* detail */
+.detailRow {
+  margin-top: 50px;
+}
+.detailRow p {
+  padding-bottom: 50px;
 }

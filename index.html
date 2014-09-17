@@ -18,8 +18,9 @@
 					<a href="" class="navbar-brand">BookShare</a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="">热门</a></li>
+					<li class="active"><a href="#/hot">热门</a></li>
 					<li><a href="">分类</a></li>
+					<li><a href="#/addBook">上传图书</a></li>
 					<li class="dropdown">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
@@ -28,8 +29,6 @@
 							<li><a href="">Action</a></li>
 							<li class="divider"></li>
 							<li><a href="">Action</a></li>
-							<li class="divider"></li>
-							<li><a href="">Action</a></li>	
 						</ul>
 					</li>
 				</ul>
@@ -49,14 +48,14 @@
 				<p class="text-muted">打造一个全方位O2O图书漂流平台！Copyright © 2014 www.mapleshaw.com All Rights Reserved</p>
 			</div>
 		</div>
-
-		<!-- 在底部加载相关js -->
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="js/frameJs/jquery.min.js"></script>	
+		<script src="js/frameJs/bootstrap.min.js"></script>
 		<script src="js/frameJs/angular.min.js"></script>
 		<script src="js/frameJs/angular-route.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/controller.js"></script>
-		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-		<script src="js/frameJs/jquery.min.js"></script>	
-		<script src="js/frameJs/bootstrap.min.js"></script>
+		<script src="js/base.js"></script>
+
 </body>
 </html>

@@ -9,6 +9,12 @@ bookShare.config(function($routeProvider) {
 	}).when('/classify',{
 		templateUrl: 'tpls/classify.html',
 		controller: 'ClassifyCtrl'
+	}).when('/addBook',{
+		templateUrl: 'tpls/addBook.html',
+		controller: 'AddBookCtrl'
+	}).when('/detail:bookId',{
+		templateUrl: 'tpls/detail.html',
+		controller: 'DetailCtrl'
 	}).otherwise({
 		redirectTo: '/hot'
 	})

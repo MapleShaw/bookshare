@@ -1,0 +1,28 @@
+nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+	.container
+		.navbar-header
+			a.navbar-brand(href='') BookShare
+		ul.nav.navbar-nav
+			li.active
+				a(href='#/hot') 热门
+			li
+				a(href='') 分类
+			li
+				a(href='#/addBook') 上传图书
+			li.dropdown
+				a.dropdown-toggle(href='', data-toggle='dropdown') Dropdown
+					span.caret
+				ul.dropdown-menu(role='menu')
+					li
+						a(href='') Action
+					li
+						a(href='') Action
+					li
+						a(href='') Action
+					li.divider
+					li
+						a(href='') Action
+		form.navbar-form.navbar-left.navbar-right(role='search')
+			.form-group
+				input.form-control(type='text', placeholder='搜搜看你想要的书。。。')
+			button.btn.btn-default 搜索

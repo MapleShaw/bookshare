@@ -4,16 +4,16 @@ var bookShare = angular.module('bookShare',[
 
 bookShare.config(function($routeProvider) {
 	$routeProvider.when('/hot',{
-		templateUrl: 'tpls/hot.html',
+		templateUrl: 'tpls/hot.jade',
 		controller: 'HotCtrl'
 	}).when('/classify',{
-		templateUrl: 'tpls/classify.html',
+		templateUrl: 'tpls/classify.jade',
 		controller: 'ClassifyCtrl'
 	}).when('/addBook',{
-		templateUrl: 'tpls/addBook.html',
+		templateUrl: 'tpls/addBook.jade',
 		controller: 'AddBookCtrl'
 	}).when('/detail:bookId',{
-		templateUrl: 'tpls/detail.html',
+		templateUrl: 'tpls/detail.jade',
 		controller: 'DetailCtrl'
 	}).otherwise({
 		redirectTo: '/hot'

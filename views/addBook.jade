@@ -1,0 +1,22 @@
+extends index
+
+block content
+  .container.content(ng-view)
+    h2 请填写您想上传的图书信息
+      small 按要求输入哦，不要乱来哦( # ▽ # )
+    form.addBookForm(method='post', action='/addBook', role='form')
+      input(type='hidden', name='_id', value='#{book._id}')
+      .form-group
+        label(for='bookname') Bookname
+        input#bookname.form-control(type='text', name='bookname', value='#{book.bookname}', placeholder='Enter bookname')
+      .form-group
+        label(for='author') Author
+        input#author.form-control(type='text', name='author', value='#{book.author}', placeholder='Enter author')
+      .form-group
+        label(for='doubanLink') BoubanLink
+        input#doubanLink.form-control(type='url', name='doubanurl', value='#{book.doubanurl}', placeholder='Enter doubanLink')
+      .form-group
+        label(for='coverImg') Upload cover
+        input#coverImg(type='file', name='coverimg', value='#{book.coverimg}')
+        p.help-block Upload cover from 豆瓣 here.
+      button.btn.btn-default(type='submit') Submit

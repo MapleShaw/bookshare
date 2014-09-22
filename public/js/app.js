@@ -19,3 +19,4 @@ bookShare.config(function($routeProvider) {
 		redirectTo: '/hot'
 	})
 });
+

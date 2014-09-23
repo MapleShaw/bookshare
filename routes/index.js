@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var _ = require('underscore');
-var bookShare = require('../routes/book.js');
+var bookShare = require('../models/book.js');
 var Book = mongoose.model('Book',bookShare);
 
 /* GET home page. */
@@ -78,14 +78,11 @@ router.post('/addBook', function(req, res) {
 		  			console.log(err);
 		  		}
 
-		  		res.redirect('/detail/'+book._id);
 	  		});
 	  		
   		});
     }else{
-    	convertImgToBase64(bookObj.coverimg, function(base64Img){
-		    bookObj.baseCoverImg = base64Img;
-		});
+    	
 
     	_book = new Book({
     		bookname : bookObj.bookname,
@@ -99,7 +96,7 @@ router.post('/addBook', function(req, res) {
 	  			console.log(err);
 	  		}
 
-	  		res.redirect('/detail/'+book._id);
+	  		res.json(book);
   		});
     }
 });
@@ -120,21 +117,3 @@ router.get('/list', function(req, res) {
 
 
 module.exports = router;
-
-//封面转为二进制
-function convertImgToBase64(url, callback, outputFormat){
-    var canvas = document.createElement('CANVAS'),
-        ctx = canvas.getContext('2d'),
-        img = new Image;
-    img.crossOrigin = 'Anonymous';
-    img.onload = function(){
-        canvas.height = img.height;
-        canvas.width = img.width;
-        ctx.drawImage(img,0,0);
-        var dataURL = canvas.toDataURL(outputFormat || 'image/png');
-        callback.call(this, dataURL);
-        canvas = null; 
-    };
-    img.src = url;
-}
-

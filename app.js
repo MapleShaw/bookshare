@@ -16,7 +16,7 @@ var app = express();
 mongoose.connect('mongodb://localhost/bookshare');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app'));//index模版的路径
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
@@ -25,7 +25,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'app')));//设定静态文件的根目录
 
 app.use('/', routes);
 app.use('/users', users);

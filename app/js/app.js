@@ -1,8 +1,8 @@
 var bookShare = angular.module('bookShare',[
-	'ngRoute','bookShareCtrls'
+	'ngRoute'
 	]);
 
-bookShare.config(function($routeProvider) {
+bookShare.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
 	$routeProvider.when('/hot',{
 		templateUrl: 'tpls/hot.jade',
 		controller: 'HotCtrl'
@@ -10,13 +10,14 @@ bookShare.config(function($routeProvider) {
 		templateUrl: 'tpls/classify.jade',
 		controller: 'ClassifyCtrl'
 	}).when('/addBook',{
-		templateUrl: 'tpls/addBook.jade',
+		templateUrl: 'views/addBook.jade',
 		controller: 'AddBookCtrl'
 	}).when('/detail:bookId',{
 		templateUrl: 'tpls/detail.jade',
 		controller: 'DetailCtrl'
 	}).otherwise({
 		redirectTo: '/hot'
-	})
-});
+	});
+	//$locationProvider.html5Mode(true);//去掉url的#
+}]);
 

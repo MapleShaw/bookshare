@@ -20,17 +20,20 @@ function HotCtrl ($scope) {
 
 
 function AddBookCtrl ($scope,$http) {
-	$scope.formData = {};
+	$scope.addBookForm = {};
     
-    $http.post('/addBook', $scope.formData)
-        .success(function (data) {
-            $scope.formData = {};
-            $scope.todos = data;
-            console.log(data);
-        })
-        .error(function (data) {
-            console.log('Error: ' + data);
-        });
+    $scope.registerPost = function () {
+        $http.post('/addBook', $scope.addBookForm)
+            .success(function (data) {
+                $scope.addBookForm = {};
+                $scope.successMsg = data.data;
+                console.log(data);
+            })
+            .error(function (data) {
+                console.log('Error: ' + data);
+            });
+    }
+    
 
 }
 

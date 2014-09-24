@@ -1,4 +1,4 @@
-extends views/head
+extends head
 
 block body
 	nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
@@ -29,7 +29,9 @@ block body
 				.form-group
 					input.form-control(type='text', placeholder='搜搜看你想要的书。。。')
 				button.btn.btn-default 搜索
-	block content
+	
+	.container.content(ng-view)
+		
 
 	.footer
 		.container

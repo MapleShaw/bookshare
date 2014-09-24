@@ -2,7 +2,7 @@ var bookShare = angular.module('bookShare',[
 	'ngRoute'
 	]);
 
-bookShare.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
+bookShare.config(function($routeProvider) {
 	$routeProvider.when('/hot',{
 		templateUrl: 'tpls/hot.jade',
 		controller: 'HotCtrl'
@@ -19,5 +19,5 @@ bookShare.config(['$routeProvider', '$locationProvider', function($routeProvider
 		redirectTo: '/hot'
 	});
 	//$locationProvider.html5Mode(true);//去掉url的#
-}]);
+});
 

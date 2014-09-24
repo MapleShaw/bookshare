@@ -1,22 +1,18 @@
-extends ../index
-
-block content
-  .container.content(ng-view)
-    h2 请填写您想上传的图书信息
-      small 按要求输入哦，不要乱来哦( # ▽ # )
-    form.addBookForm(method='post', action='/addBook', role='form')
-      input(type='hidden', name='_id', ng-model="addBookForm._id")
-      .form-group
-        label(for='bookname') Bookname
-        input#bookname.form-control(type='text', name='bookname', ng-model="addBookForm.bookname", ng-change="registerCheck()", placeholder='Enter bookname', autofocus='autofocus', required)
-      .form-group
-        label(for='author') Author
-        input#author.form-control(type='text', name='author', ng-model="addBookForm.author", placeholder='Enter author', required)
-      .form-group
-        label(for='doubanLink') BoubanLink
-        input#doubanLink.form-control(type='url', name='doubanurl', ng-model="addBookForm.doubanurl", placeholder='Enter doubanLink', required)
-      .form-group
-        label(for='coverImg') Upload cover
-        input#coverImg(type='file', name='coverimg', ng-model="addBookForm.coverimg", required)
-        p.help-block Upload cover from 豆瓣 here.
-      button.btn.btn-default(type='submit', ng-click="registerPost()") Submit
+h2 请填写您想上传的图书信息
+  small 按要求输入哦，不要乱来哦( # ▽ # )
+form.addBookForm(method='post', action='/addBook', role='form')
+  input(type='hidden', name='_id', ng-model="addBookForm._id")
+  .form-group
+    label(for='bookname') Bookname
+    input#bookname.form-control(type='text', name='bookname', ng-model="addBookForm.bookname", ng-change="registerCheck()", placeholder='Enter bookname', autofocus='autofocus', required)
+  .form-group
+    label(for='author') Author
+    input#author.form-control(type='text', name='author', ng-model="addBookForm.author", placeholder='Enter author', required)
+  .form-group
+    label(for='doubanLink') BoubanLink
+    input#doubanLink.form-control(type='url', name='doubanurl', ng-model="addBookForm.doubanurl", placeholder='Enter doubanLink', required)
+  .form-group
+    label(for='coverImg') Upload cover
+    input#coverImg(type='file', name='coverimg', ng-model="addBookForm.coverimg", required)
+    p.help-block Upload cover from 豆瓣 here.
+  button.btn.btn-default(type='submit', ng-click="registerPost()") Submit

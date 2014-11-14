@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
   	}
 
   	res.render('index',{
-  		title:'BookShare11',
+  		title:'BookShare',
   		books:books
   	});
   })
@@ -47,8 +47,8 @@ router.get('/update/:id', function(req, res) {
 });
 
 /* GET admin page. */
-router.get('/book',function(req,res){
-	res.render('/views/addBook',{
+router.get('/addBook',function(req,res){
+	res.render('views/addBook',{
 		title:'BookShare 录入',
 		book:{
 			bookname : '',
@@ -96,7 +96,11 @@ router.post('/addBook', function(req, res) {
 	  			console.log(err);
 	  		}
 
-	  		res.json(book);
+	  		// res.json(book);
+	  		res.render('views/detail',{
+				title:book.bookname,
+				book:book
+			});
   		});
     }
 });

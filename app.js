@@ -17,7 +17,7 @@ var db = require('./config/db');
 mongoose.connect(db.url);//搞毛，不能用localhost
 
 // view engine setup
-app.set('views', path.join(__dirname, 'public/'));//index模版的路径
+app.set('views', path.join(__dirname, 'public/'));//index模版的路径，这里public后面加了“／”，路由里面的render就直接views／xxx
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public

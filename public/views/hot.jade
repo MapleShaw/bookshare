@@ -1,8 +1,8 @@
 extends ../index
 
-block hot
+block content
 	h2
-		| 来自朋友们的热门图书
+		| 来自朋友们的热门图书 #{title}
 		small 谢谢做出贡献的亲们^_^o~ 努力！
 		ul.movieList.hotBookList
 			li(ng-repeat='book in books')

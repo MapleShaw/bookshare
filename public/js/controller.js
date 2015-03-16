@@ -1,27 +1,20 @@
 'use strict';
 
-
-function HotCtrl ($scope) {
-    alert(1)
-    $scope.title = "test";
-	$scope.books = {};
-    // when landing on the page, get all todos and show them
-    // $http.get('/api/todos')
-    //     .success(function (data) {
-    //         $scope.todos = data;
-    //         console.log(data);
-    //     })
-    //     .error(function (data) {
-    //         console.log('Error: ' + data);
-    //     });
-
-}
+bookShare.controller('HotCtrl',['$scope','$http',function($scope,$http){
+    $http.get('/hot')
+            .success(function (data) {
+                
+                console.log(data);
+            })
+            .error(function (data) {
+                console.log('Error: ' + data);
+            });
+    $scope.books = {};
+}]);
 
 
-
-
-function AddBookCtrl ($scope,$http) {
-	$scope.addBookForm = {};
+bookShare.controller('AddBookCtrl',['$scope','$http',function($scope,$http){
+    $scope.addBookForm = {};
     
     $scope.registerPost = function () {
         $http.post('/addBook', $scope.addBookForm)
@@ -41,8 +34,8 @@ function AddBookCtrl ($scope,$http) {
             bookObj.baseCoverImg = base64Img;
         });
     }
+}]);
 
-}
 
 
 function convertImgToBase64(url, callback, outputFormat){

@@ -5,10 +5,5 @@ block content
 		| 来自朋友们的热门图书 #{title}
 		small 谢谢做出贡献的亲们^_^o~ 努力！
 		ul.movieList.hotBookList
-			li(ng-repeat='book in books')
-				img(src='{{book.img}}', alt='{{book.name}}')
-				p
-					| {{book.name}}
-				a(href='{{book.doubanUrl}}', target='_blank')
-				img(src='http://img3.douban.com/pics/douban-icons/favicon_16x16.png', alt='豆瓣')
-				a(href='{{book.url}}', target='_blank') 详情
+			each val, index in ['西瓜', '苹果', '梨子']
+				li= index + ': ' + val

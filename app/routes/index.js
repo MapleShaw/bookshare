@@ -1,3 +1,5 @@
+// 这里是nodejs的路由
+
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
@@ -125,11 +127,11 @@ router.get('/hot', function(req, res) {
 	  	if(err){
 	  		console.log(err);
 	  	}
-
-	  	res.render('views/hot',{
-	  		title:'BookShare 热门',
-	  		books:books
-	  	});
+	  	res.json(books);
+	  	// res.render('views/hot',{
+	  	// 	title:'BookShare 热门',
+	  	// 	books:books
+	  	// });
 	});
 });
 
